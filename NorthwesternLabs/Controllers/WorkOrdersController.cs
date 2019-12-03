@@ -1,4 +1,9 @@
-﻿using System;
+﻿//Server Name: northwest2-16.database.windows.net
+//Use SQL Authentication
+//Username: NorthwestLabsAdmin2019
+//Password: IntExAdmin2-16
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
