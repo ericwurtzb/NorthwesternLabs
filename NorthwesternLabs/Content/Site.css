@@ -1,6 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    font-family: 'Roboto', sans-serif !important;
+    text-transform: uppercase;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -16,3 +18,31 @@ textarea {
     max-width: 280px;
 }
 
+/*custom button styling*/
+.bluebtn {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    background: #4F4CFF !important;
+    border-radius: 4px;
+    border: none;
+    color: white !important;
+    width: 200px;
+    margin: 5px 10px;
+}
+
+.bluebtn:hover {
+    background-color: #403DD4 !important;
+}
+
+div.checkbox {
+    padding-left: 0;
+    border-radius: 4px;
+}
+
+h2 {
+    padding-top: 20px;
+}
+
+td {
+    text-transform: none;
+}

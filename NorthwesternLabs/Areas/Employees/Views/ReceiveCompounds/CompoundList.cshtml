@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<NorthwesternLabs.Models.Compound>
 
 @{
-    ViewBag.Title = "CompoundList";
+    ViewBag.Title = "Compound List";
 }
 
 <h2>CompoundList @ViewBag.WorkOrder</h2>
@@ -35,7 +35,7 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+    @foreach (var item in Model) {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.WorkOrderID)
@@ -59,11 +59,11 @@
             @Html.DisplayFor(modelItem => item.MTD)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CompoundLT }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CompoundLT }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CompoundLT })
+            @Html.ActionLink("Edit", "Edit", new { id = item.CompoundLT }) |
+            @Html.ActionLink("Details", "Details", new { id = item.CompoundLT }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.CompoundLT })
         </td>
     </tr>
-}
+    }
 
 </table>
