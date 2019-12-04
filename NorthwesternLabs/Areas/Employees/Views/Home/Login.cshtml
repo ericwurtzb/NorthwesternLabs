@@ -1,20 +1,38 @@
 ﻿@{
     /**/
 
-    ViewBag.Title = "Login";
+    ViewBag.Title = "Log in";
 }
 
-<h2>Login</h2>
+<center>
 
-@using (Html.BeginForm("Login", "Home", FormMethod.Post))
-{
-    <label for="inputUserName">Username</label>
-    @Html.TextBox("Username")
-    <label for="inputPassword">Password</label>
-    @Html.Password("Password")
-    <button type="submit">Login</button>
-}
-<br />
-<br />
-@Html.ActionLink("Create a new login", "Create", "Home")
+    <br />
+    <br />
+    <br />
 
+    <strong><h2 style="text-transform: none;">Employee Log In Portal</h2></strong>
+
+    <br />
+
+        @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+        {
+    <div class="login-form">
+        <!--<label for="inputUserName">Username:</label>-->
+        @Html.TextBox("Username", "Username", new { @class = "login-input" })
+        <!--<br />
+        @Html.TextBox("Username", null, new { placeholder = "Username" })-->
+    </div>
+            <div class="login-form">
+                <!--<label for="inputPassword">Password:</label>-->
+                @Html.Password("Password", "Passworddddd", new { @class = "login-input" })
+            </div>
+            <button type="submit" class="bluebtn" style="height: 40px;">Log In</button>
+        }
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    @Html.ActionLink("Create a new login", "Create", "Home")
+</center>

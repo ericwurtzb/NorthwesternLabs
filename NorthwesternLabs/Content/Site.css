@@ -46,3 +46,20 @@ h2 {
 td {
     text-transform: none;
 }
+
+.edit-details-delete {
+    text-transform: uppercase;
+}
+
+.login-form {
+    padding: 5px;
+}
+
+.login-input {
+    border-radius: 4px;
+    color: #4f4cff;
+    border: 1px solid #4f4cff;
+    text-transform: uppercase;
+    padding: 5px;
+    width: 200px;
+}

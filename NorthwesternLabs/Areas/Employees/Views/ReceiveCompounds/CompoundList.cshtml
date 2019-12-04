@@ -59,9 +59,9 @@
             @Html.DisplayFor(modelItem => item.MTD)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.CompoundLT }) |
-            @Html.ActionLink("Details", "Details", new { id = item.CompoundLT }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.CompoundLT })
+            @Html.ActionLink("Edit", "Edit", new { id = item.CompoundLT }, new { @class = "edit-details-delete" }) |
+            @Html.ActionLink("Details", "Details", new { id = item.CompoundLT }, new { @class = "edit-details-delete" }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.CompoundLT }, new { @class = "edit-details-delete" })
         </td>
     </tr>
     }
