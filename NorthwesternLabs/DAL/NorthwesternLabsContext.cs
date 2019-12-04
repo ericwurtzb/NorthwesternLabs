@@ -19,5 +19,7 @@ namespace NorthwesternLabs.DAL
 
         }
         public DbSet<WorkOrder> WorkOrder { get; set; }
+
+        public System.Data.Entity.DbSet<NorthwesternLabs.Models.Compound> Compounds { get; set; }
     }
 }

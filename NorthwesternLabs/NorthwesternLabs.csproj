@@ -109,6 +109,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Areas\Employees\Views\Home\Index.cshtml" />
     <Content Include="Areas\Employees\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Employees\Views\Compounds\Create.cshtml" />
+    <Content Include="Areas\Employees\Views\Compounds\Delete.cshtml" />
+    <Content Include="Areas\Employees\Views\Compounds\Details.cshtml" />
+    <Content Include="Areas\Employees\Views\Compounds\Edit.cshtml" />
+    <Content Include="Areas\Employees\Views\Compounds\Index.cshtml" />
+    <Content Include="Areas\Customers\Views\web.config" />
+    <Content Include="Areas\Customers\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Customers\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Customers\Views\View.cshtml" />
+    <Content Include="Areas\Employees\Views\Shared\_Layout.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -124,6 +134,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Customers\CustomersAreaRegistration.cs" />
+    <Compile Include="Areas\Employees\Controllers\CompoundsController.cs" />
     <Compile Include="Areas\Employees\Controllers\HomeController.cs" />
     <Compile Include="Areas\Employees\Controllers\testeriiiiiiiinoController.cs" />
     <Compile Include="Areas\Employees\EmployeesAreaRegistration.cs" />
@@ -164,8 +176,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Customers\Controllers\" />
+    <Folder Include="Areas\Customers\Models\" />
     <Folder Include="Areas\Employees\Models\" />
-    <Folder Include="Areas\Employees\Views\Shared\" />
     <Folder Include="Areas\Employees\Views\testeriiiiiiiino\" />
   </ItemGroup>
   <ItemGroup>
