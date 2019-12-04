@@ -47,7 +47,7 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MaterialID,Name,Amount,Cost")] Material material)
+        public ActionResult Create([Bind(Include = "MaterialID,TestID,Name,Amount,Cost")] Material material)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MaterialID,Name,Amount,Cost")] Material material)
+        public ActionResult Edit([Bind(Include = "MaterialID,TestID,Name,Amount,Cost")] Material material)
         {
             if (ModelState.IsValid)
             {

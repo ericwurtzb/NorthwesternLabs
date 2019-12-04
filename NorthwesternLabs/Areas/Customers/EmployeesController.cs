@@ -9,109 +9,109 @@ using System.Web.Mvc;
 using NorthwesternLabs.DAL;
 using NorthwesternLabs.Models;
 
-namespace NorthwesternLabs.Areas.Employees.Controllers
+namespace NorthwesternLabs.Areas.Customers
 {
-    public class TestsController : Controller
+    public class EmployeesController : Controller
     {
         private NorthwesternLabsContext db = new NorthwesternLabsContext();
 
-        // GET: Employees/Tests
+        // GET: Customers/Employees
         public ActionResult Index()
         {
-            return View(db.Tests.ToList());
+            return View(db.Employees.ToList());
         }
 
-        // GET: Employees/Tests/Details/5
+        // GET: Customers/Employees/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Test test = db.Tests.Find(id);
-            if (test == null)
+            Employee employee = db.Employees.Find(id);
+            if (employee == null)
             {
                 return HttpNotFound();
             }
-            return View(test);
+            return View(employee);
         }
 
-        // GET: Employees/Tests/Create
+        // GET: Customers/Employees/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Employees/Tests/Create
+        // POST: Customers/Employees/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "TestID,AssayID,TestType,RerunBool,DateTimeScheduled,DateTimeCompleted")] Test test)
+        public ActionResult Create([Bind(Include = "EmployeeID,Wage,FirstName,LastName,Street,City,State,Zip,Location,Title,Department")] Employee employee)
         {
             if (ModelState.IsValid)
             {
-                db.Tests.Add(test);
+                db.Employees.Add(employee);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(test);
+            return View(employee);
         }
 
-        // GET: Employees/Tests/Edit/5
+        // GET: Customers/Employees/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Test test = db.Tests.Find(id);
-            if (test == null)
+            Employee employee = db.Employees.Find(id);
+            if (employee == null)
             {
                 return HttpNotFound();
             }
-            return View(test);
+            return View(employee);
         }
 
-        // POST: Employees/Tests/Edit/5
+        // POST: Customers/Employees/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "TestID,AssayID,TestType,RerunBool,DateTimeScheduled,DateTimeCompleted")] Test test)
+        public ActionResult Edit([Bind(Include = "EmployeeID,Wage,FirstName,LastName,Street,City,State,Zip,Location,Title,Department")] Employee employee)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(test).State = EntityState.Modified;
+                db.Entry(employee).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(test);
+            return View(employee);
         }
 
-        // GET: Employees/Tests/Delete/5
+        // GET: Customers/Employees/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Test test = db.Tests.Find(id);
-            if (test == null)
+            Employee employee = db.Employees.Find(id);
+            if (employee == null)
             {
                 return HttpNotFound();
             }
-            return View(test);
+            return View(employee);
         }
 
-        // POST: Employees/Tests/Delete/5
+        // POST: Customers/Employees/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Test test = db.Tests.Find(id);
-            db.Tests.Remove(test);
+            Employee employee = db.Employees.Find(id);
+            db.Employees.Remove(employee);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
