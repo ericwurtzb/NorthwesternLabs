@@ -16,7 +16,7 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
     {
         private NorthwesternLabsContext db = new NorthwesternLabsContext();
         // GET: Employees/Home
-        [Authorize(Roles="Employee")]
+        [Authorize]
         public ActionResult Index()
         {
             return View();

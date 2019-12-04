@@ -172,6 +172,9 @@
     <Content Include="Areas\Employees\Views\Users\Edit.cshtml" />
     <Content Include="Areas\Employees\Views\Users\Index.cshtml" />
     <Content Include="Areas\Customers\Views\CustHome\Index.cshtml" />
+    <Content Include="Areas\Employees\Views\ReceiveCompounds\Create.cshtml" />
+    <Content Include="Areas\Employees\Views\ReceiveCompounds\CompoundList.cshtml" />
+    <Content Include="Areas\Employees\Views\ReceiveCompounds\CompoundCreate.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -198,6 +201,7 @@
     <Compile Include="Areas\Employees\Controllers\HomeController.cs" />
     <Compile Include="Areas\Employees\Controllers\InvoicesController.cs" />
     <Compile Include="Areas\Employees\Controllers\MaterialsController.cs" />
+    <Compile Include="Areas\Employees\Controllers\ReceiveCompoundsController.cs" />
     <Compile Include="Areas\Employees\Controllers\TestSchedulesController.cs" />
     <Compile Include="Areas\Employees\Controllers\TestsController.cs" />
     <Compile Include="Areas\Employees\Controllers\UsersController.cs" />
