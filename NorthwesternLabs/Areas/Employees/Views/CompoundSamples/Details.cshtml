@@ -1,0 +1,42 @@
+﻿@model NorthwesternLabs.Models.CompoundSample
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CompoundSample</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AssayID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssayID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantityMg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantityMg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Appearance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Appearance)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

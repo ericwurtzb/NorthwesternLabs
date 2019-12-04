@@ -11,12 +11,12 @@ namespace NorthwesternLabs.Models
     {
         [Key]
         [Column("TestID")]
-        public int TestID1 { get; set; }
+        public int TestID { get; set; }
 
         [StringLength(50)]
         public string TestType { get; set; }
 
-        public bool? RerunDateTime { get; set; }
+        public bool? RerunBool { get; set; }
 
         public int? MaterialID { get; set; }
 

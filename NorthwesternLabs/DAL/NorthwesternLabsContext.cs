@@ -21,5 +21,19 @@ namespace NorthwesternLabs.DAL
         public DbSet<WorkOrder> WorkOrder { get; set; }
 
         public System.Data.Entity.DbSet<NorthwesternLabs.Models.Compound> Compounds { get; set; }
+
+        public System.Data.Entity.DbSet<NorthwesternLabs.Models.Assay> Assays { get; set; }
+
+        public System.Data.Entity.DbSet<NorthwesternLabs.Models.Invoice> Invoices { get; set; }
+
+        public System.Data.Entity.DbSet<NorthwesternLabs.Models.Customer> Customers { get; set; }
+
+        public System.Data.Entity.DbSet<NorthwesternLabs.Models.Employee> Employees { get; set; }
+
+        public System.Data.Entity.DbSet<NorthwesternLabs.Models.Material> Materials { get; set; }
+
+        public System.Data.Entity.DbSet<NorthwesternLabs.Models.CompoundSample> CompoundSamples { get; set; }
+
+        public System.Data.Entity.DbSet<NorthwesternLabs.Models.Test> Tests { get; set; }
     }
 }
