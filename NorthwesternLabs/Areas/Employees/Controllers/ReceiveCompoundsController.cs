@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
 
@@ -175,6 +176,32 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
             }
             return View(compound);
         }
+        //-------------------------------------------------------------------------------
 
+        [HttpGet]
+        public ActionResult SendConfirmation()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult SendConfirmation(string sName, string sEmail)
+        {
+            int passWorkOrder = newCurrentWorkOrder;
+            //return HTML string to view
+            ViewBag.Message = "Thank you " + sName + ". BlowOut will send an email to " + sEmail + ".";
+
+            //Send email
+            var client = new SmtpClient("smtp.gmail.com", 587)
+            {
+                UseDefaultCredentials = false,
+                //Aaron will provide password during grading with TAs
+                Credentials = new NetworkCredential("aaronjhayden@gmail.com", "byu221byu"),
+                EnableSsl = true
+            };
+            client.Send("aaronjhayden@gmail.com", sEmail, "test", string.Format("Thank you {0}. We have received your chemical compounds. You can track the progress of your work order on your customer portal. Link: www.letsgo.com Northwest Labs", sName, sEmail));
+
+            return RedirectToAction("Index", "Home");
+        }
     }
 }
