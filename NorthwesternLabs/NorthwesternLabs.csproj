@@ -147,7 +147,7 @@
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\Material.cs" />
-    <Compile Include="Models\TestID.cs" />
+    <Compile Include="Models\Test.cs" />
     <Compile Include="Models\WorkOrder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
