@@ -34,7 +34,7 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
             var currentUser =
                 db.Database.SqlQuery<User>(
             "Select * " +
-            "FROM User " +
+            "FROM [User] " +
             "WHERE Username = '" + username + "' AND " +
             "Password = '" + password + "'");
 
