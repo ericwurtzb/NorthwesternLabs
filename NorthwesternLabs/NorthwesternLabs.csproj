@@ -119,6 +119,11 @@
     <Content Include="Areas\Customers\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Customers\Views\View.cshtml" />
     <Content Include="Areas\Employees\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Employees\Views\WorkOrders\Create.cshtml" />
+    <Content Include="Areas\Employees\Views\WorkOrders\Delete.cshtml" />
+    <Content Include="Areas\Employees\Views\WorkOrders\Details.cshtml" />
+    <Content Include="Areas\Employees\Views\WorkOrders\Edit.cshtml" />
+    <Content Include="Areas\Employees\Views\WorkOrders\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -138,6 +143,7 @@
     <Compile Include="Areas\Employees\Controllers\CompoundsController.cs" />
     <Compile Include="Areas\Employees\Controllers\HomeController.cs" />
     <Compile Include="Areas\Employees\Controllers\testeriiiiiiiinoController.cs" />
+    <Compile Include="Areas\Employees\Controllers\WorkOrdersController.cs" />
     <Compile Include="Areas\Employees\EmployeesAreaRegistration.cs" />
     <Compile Include="Controllers\WorkOrdersController.cs" />
     <Compile Include="DAL\NorthwesternLabsContext.cs" />
