@@ -125,6 +125,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Employees\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Employees\Controllers\testeriiiiiiiinoController.cs" />
     <Compile Include="Areas\Employees\EmployeesAreaRegistration.cs" />
     <Compile Include="Controllers\WorkOrdersController.cs" />
     <Compile Include="DAL\NorthwesternLabsContext.cs" />
@@ -165,6 +166,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Employees\Models\" />
     <Folder Include="Areas\Employees\Views\Shared\" />
+    <Folder Include="Areas\Employees\Views\testeriiiiiiiino\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
