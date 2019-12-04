@@ -35,5 +35,7 @@ namespace NorthwesternLabs.DAL
         public System.Data.Entity.DbSet<NorthwesternLabs.Models.CompoundSample> CompoundSamples { get; set; }
 
         public System.Data.Entity.DbSet<NorthwesternLabs.Models.Test> Tests { get; set; }
+
+        public System.Data.Entity.DbSet<NorthwesternLabs.Models.User> Users { get; set; }
     }
 }
