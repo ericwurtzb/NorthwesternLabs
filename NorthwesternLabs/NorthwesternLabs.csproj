@@ -119,6 +119,21 @@
     <Content Include="Areas\Customers\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Customers\Views\View.cshtml" />
     <Content Include="Areas\Employees\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Employees\Views\Assays\Create.cshtml" />
+    <Content Include="Areas\Employees\Views\Assays\Delete.cshtml" />
+    <Content Include="Areas\Employees\Views\Assays\Details.cshtml" />
+    <Content Include="Areas\Employees\Views\Assays\Edit.cshtml" />
+    <Content Include="Areas\Employees\Views\Assays\Index.cshtml" />
+    <Content Include="Areas\Employees\Views\Materials\Create.cshtml" />
+    <Content Include="Areas\Employees\Views\Materials\Delete.cshtml" />
+    <Content Include="Areas\Employees\Views\Materials\Details.cshtml" />
+    <Content Include="Areas\Employees\Views\Materials\Edit.cshtml" />
+    <Content Include="Areas\Employees\Views\Materials\Index.cshtml" />
+    <Content Include="Areas\Employees\Views\Tests\Create.cshtml" />
+    <Content Include="Areas\Employees\Views\Tests\Delete.cshtml" />
+    <Content Include="Areas\Employees\Views\Tests\Details.cshtml" />
+    <Content Include="Areas\Employees\Views\Tests\Edit.cshtml" />
+    <Content Include="Areas\Employees\Views\Tests\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -135,10 +150,14 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Customers\CustomersAreaRegistration.cs" />
+    <Compile Include="Areas\Employees\Controllers\AssaysController.cs" />
+    <Compile Include="Areas\Employees\Controllers\CompoundSamplesController.cs" />
     <Compile Include="Areas\Employees\Controllers\CompoundsController.cs" />
     <Compile Include="Areas\Employees\Controllers\HomeController.cs" />
     <Compile Include="Areas\Employees\Controllers\testeriiiiiiiinoController.cs" />
+    <Compile Include="Areas\Employees\Controllers\TestsController.cs" />
     <Compile Include="Areas\Employees\EmployeesAreaRegistration.cs" />
+    <Compile Include="Areas\Employees\Controllers\MaterialsController.cs" />
     <Compile Include="Controllers\WorkOrdersController.cs" />
     <Compile Include="DAL\NorthwesternLabsContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -179,6 +198,7 @@
     <Folder Include="Areas\Customers\Controllers\" />
     <Folder Include="Areas\Customers\Models\" />
     <Folder Include="Areas\Employees\Models\" />
+    <Folder Include="Areas\Employees\Views\CompoundSamples\" />
     <Folder Include="Areas\Employees\Views\testeriiiiiiiino\" />
   </ItemGroup>
   <ItemGroup>
