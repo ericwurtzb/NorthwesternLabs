@@ -175,6 +175,9 @@
     <Content Include="Areas\Employees\Views\ReceiveCompounds\Create.cshtml" />
     <Content Include="Areas\Employees\Views\ReceiveCompounds\CompoundList.cshtml" />
     <Content Include="Areas\Employees\Views\ReceiveCompounds\CompoundCreate.cshtml" />
+    <Content Include="Areas\Employees\Views\ReceiveCompounds\Edit.cshtml" />
+    <Content Include="Areas\Employees\Views\ReceiveCompounds\Details.cshtml" />
+    <Content Include="Areas\Employees\Views\ReceiveCompounds\Delete.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
