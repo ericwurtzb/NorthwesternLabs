@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "SendConfirmation";
+}
+
+<h2>Send Confirmation</h2>
+
+
+@{
+    ViewBag.Title = "Email";
+}
+
+<!--input form-->
+<form action="SendConfirmation" method="post">
+    <table>
+        <tr>
+            <td>Enter Name: </td>
+            <td><input type="text" name="sName" /></td>
+        </tr>
+        <tr>
+            <td>Enter Email: </td>
+            <td><input type="text" name="sEmail" /></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Submit Form" /></td>
+        </tr>
+    </table>
+</form>

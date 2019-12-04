@@ -178,6 +178,7 @@
     <Content Include="Areas\Employees\Views\ReceiveCompounds\Edit.cshtml" />
     <Content Include="Areas\Employees\Views\ReceiveCompounds\Details.cshtml" />
     <Content Include="Areas\Employees\Views\ReceiveCompounds\Delete.cshtml" />
+    <Content Include="Areas\Employees\Views\ReceiveCompounds\SendConfirmation.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
