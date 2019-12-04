@@ -4,10 +4,11 @@
     ViewBag.Title = "Compound List";
 }
 
-<h2>Compound List @ViewBag.WorkOrder</h2>
+<h2>Compound List</h2>
+<h3 style="text-transform: none;">Work Order #@ViewBag.WorkOrder</h3>
 
 <p>
-    @Html.ActionLink("Create New", "CompoundCreate")
+    @Html.ActionLink("Add Compound", "CompoundCreate")
 </p>
 <table class="table">
     <tr>
@@ -72,6 +73,5 @@
 <br />
 <br />
 @Html.ActionLink("Send Confirmation", "SendConfirmation", "ReceiveCompounds", null, htmlAttributes: new { @class = "btn btn-primary bluebtn", @role = "button" })
-<br />
 <br />
 @Html.ActionLink("Back to Home", "Index", "Home", null, htmlAttributes: new { @class = "btn btn-primary bluebtn", @role = "button" })

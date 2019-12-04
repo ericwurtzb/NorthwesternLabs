@@ -1,10 +1,10 @@
 ﻿@model NorthwesternLabs.Models.Compound
 
 @{
-    ViewBag.Title = "CompoundCreate";
+    ViewBag.Title = "Compound Create";
 }
 
-<h2>Compound Create</h2>
+<h2>Add Compound</h2>
 
 @using (Html.BeginForm()) 
 {
@@ -72,6 +72,6 @@
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List of Compounds", "CompoundList")
-</div>
+    <div>
+        @Html.ActionLink("Back to List of Compounds", "CompoundList", new { id = ViewBag.WorkOrder })
+    </div>
