@@ -4,7 +4,7 @@
     ViewBag.Title = "Compound List";
 }
 
-<h2>Compound List</h2>
+<h2>Compound List @ViewBag.WorkOrder</h2>
 
 <p>
     @Html.ActionLink("Create New", "CompoundCreate")
@@ -35,35 +35,43 @@
         <th></th>
     </tr>
 
-    @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.WorkOrderID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompoundName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateArrived)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ReceivedBy)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Weight)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Mass)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MTD)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.CompoundLT }, new { @class = "edit-details-delete" }) |
-            @Html.ActionLink("Details", "Details", new { id = item.CompoundLT }, new { @class = "edit-details-delete" }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.CompoundLT }, new { @class = "edit-details-delete" })
-        </td>
-    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkOrderID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompoundName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateArrived)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReceivedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTD)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CompoundLT }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CompoundLT }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CompoundLT })
+            </td>
+        </tr>
     }
 
 </table>
+
+<br />
+<br />
+@Html.ActionLink("Send Confirmation", "SendConfirmation", "ReceiveCompounds", null, htmlAttributes: new { @class = "btn btn-primary bluebtn", @role = "button" })
+<br />
+<br />
+@Html.ActionLink("Back to Home", "Index", "Home", null, htmlAttributes: new { @class = "btn btn-primary bluebtn", @role = "button" })
