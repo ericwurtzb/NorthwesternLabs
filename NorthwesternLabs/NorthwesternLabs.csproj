@@ -115,6 +115,10 @@
     <Content Include="Areas\Employees\Views\Compounds\Edit.cshtml" />
     <Content Include="Areas\Employees\Views\Compounds\Index.cshtml" />
     <Content Include="Areas\Customers\Views\web.config" />
+    <Content Include="Areas\Customers\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Customers\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Customers\Views\View.cshtml" />
+    <Content Include="Areas\Employees\Views\Shared\_Layout.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -174,9 +178,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Customers\Controllers\" />
     <Folder Include="Areas\Customers\Models\" />
-    <Folder Include="Areas\Customers\Views\Shared\" />
     <Folder Include="Areas\Employees\Models\" />
-    <Folder Include="Areas\Employees\Views\Shared\" />
     <Folder Include="Areas\Employees\Views\testeriiiiiiiino\" />
   </ItemGroup>
   <ItemGroup>
