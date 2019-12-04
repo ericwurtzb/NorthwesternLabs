@@ -9,8 +9,10 @@ using System.Web.Mvc;
 namespace NorthwesternLabs.Areas.Employees.Controllers
 {
     public class ReceiveCompoundsController : Controller
+    
     {
         private NorthwesternLabsContext db = new NorthwesternLabsContext();
+        public static int newCurrentWorkOrder;
 
         // GET: Employees/WorkOrders/Create
         public ActionResult Create()
@@ -39,6 +41,8 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
         // GET: Employees/Compounds/Create
         public ActionResult CompoundList(int id)
         {
+            newCurrentWorkOrder = id;
+            ViewBag.WorkOrder = newCurrentWorkOrder;
             var workOrderID = id;
 
             var currentWorkOrder =
@@ -70,6 +74,7 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
         // GET: Employees/Compounds/Create
         public ActionResult CompoundCreate()
         {
+            ViewBag.WorkOrder = newCurrentWorkOrder;
             return View();
         }
 
@@ -82,6 +87,7 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
         {
             if (ModelState.IsValid)
             {
+                compound.WorkOrderID = newCurrentWorkOrder;
                 db.Compounds.Add(compound);
                 db.SaveChanges();
                 int passWorkOrder = compound.WorkOrderID;
