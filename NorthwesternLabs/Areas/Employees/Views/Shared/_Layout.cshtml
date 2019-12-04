@@ -21,12 +21,12 @@
                     @Html.ActionLink("Northwest Labs Pharmaceutical", "Index", "Home", new { area = "" }, new { @class = "navbar-brand nav-title" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav nav-list">
                     <!--these routes need to be updated-->
                     <li>@Html.ActionLink("Account", "Rental", "Home", new { @class = "nav-item" })</li>
-                    <li>|</li>
+                    <!--<li>|</li>-->
                     <li>@Html.ActionLink("Help", "About", "Home", new { @class = "nav-item" })</li>
-                    <li>|</li>
+                    <!--<li>|</li>-->
                     <li>@Html.ActionLink("Sign Out", "Email", "Contact", new { @class = "nav-item" })</li>
                 </ul>
             </div>
@@ -54,11 +54,15 @@
         }
         .nav-item {
             color: #404040 !important;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto', sans-serif !important;
             text-transform: uppercase;
+            padding-top: 25px !important;
         }
         .nav-item:hover {
             color: #404040;
+        }
+        .nav-list {
+            float: right !important;
         }
     </style>
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>

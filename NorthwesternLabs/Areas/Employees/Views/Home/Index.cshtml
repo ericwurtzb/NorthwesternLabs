@@ -8,14 +8,15 @@
 <br />
 <br />
 <center>
+    <br />
+    <br />
     @Html.ActionLink("View Work Orders", "Index", "WorkOrders", null, htmlAttributes: new { @class = "btn btn-primary bluebtn", @role = "button" })
     @Html.ActionLink("View Test Schedule", "Index", "TestSchedules", null, htmlAttributes: new { @class = "btn btn-primary bluebtn", @role = "button" })
     @Html.ActionLink("View Invoices", "Index", "Invoices", null, htmlAttributes: new { @class = "btn btn-primary bluebtn", @role = "button" })
     <hr />
-    <br />
     @Html.ActionLink("Employees", "Index", "Employees", null, htmlAttributes: new { @class = "btn btn-primary bluebtn", @role = "button" })
     @Html.ActionLink("Customers", "Index", "Customers", null, htmlAttributes: new { @class = "btn btn-primary bluebtn", @role = "button" })
-    <br /><br /><br />
+    <br /><br />
     @Html.ActionLink("Tests", "Index", "Tests", null, htmlAttributes: new { @class = "btn btn-primary bluebtn", @role = "button" })
     @Html.ActionLink("Materials", "Index", "Materials", null, htmlAttributes: new { @class = "btn btn-primary bluebtn", @role = "button" })
     @Html.ActionLink("Assays", "Index", "Assays", null, htmlAttributes: new { @class = "btn btn-primary bluebtn", @role = "button" })
@@ -33,6 +34,7 @@
         border: none;
         color: white;
         width: 200px;
+        margin: 5px 10px;
     }
     .bluebtn:hover {
         background-color: #403DD4;
