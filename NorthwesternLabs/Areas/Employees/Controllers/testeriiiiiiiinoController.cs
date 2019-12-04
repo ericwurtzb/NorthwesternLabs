@@ -13,5 +13,10 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
         {
             return View();
         }
+
+        public ActionResult BEST_METHOD_EVER()
+        {
+            return View();
+        }
     }
 }
