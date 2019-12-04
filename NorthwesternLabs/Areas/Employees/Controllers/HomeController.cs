@@ -3,6 +3,8 @@ using NorthwesternLabs.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Security.Claims;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
@@ -14,7 +16,7 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
     {
         private NorthwesternLabsContext db = new NorthwesternLabsContext();
         // GET: Employees/Home
-        [Authorize]
+        [Authorize(Roles="Employee")]
         public ActionResult Index()
         {
             return View();
@@ -31,18 +33,39 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
             String username = form["Username"].ToString();
             String password = form["Password"].ToString();
 
-            var currentUser =
+           IEnumerable<User> currentUser =
                 db.Database.SqlQuery<User>(
             "Select * " +
             "FROM [User] " +
             "WHERE Username = '" + username + "' AND " +
             "Password = '" + password + "'");
+            
 
             if (currentUser.Count() > 0)
             {
-                FormsAuthentication.SetAuthCookie(username, rememberMe);
 
-                return RedirectToAction("Index", "Home");
+                FormsAuthentication.SetAuthCookie(username, rememberMe);
+          
+
+
+                if (currentUser.First().CustomerID != null)
+                {
+                    //return customer page
+                    //Roles.AddUserToRole(currentUser.First().Username, "Customer");
+                   
+
+                    return RedirectToAction("Index", "CustHome", new { area = "Customers" });
+                }
+                
+                if (currentUser.First().EmployeeID != null)
+                {
+                 
+                    return RedirectToAction("Index", "Home");
+                    
+                }
+
+
+                return Content("not found");
 
             }
             else
