@@ -6,8 +6,8 @@ namespace NorthwesternLabs.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("TestID")]
-    public partial class TestID
+    [Table("Test")]
+    public partial class Test
     {
         [Key]
         [Column("TestID")]
@@ -16,7 +16,7 @@ namespace NorthwesternLabs.Models
         [StringLength(50)]
         public string TestType { get; set; }
 
-        public DateTime? RerunDateTime { get; set; }
+        public bool? RerunDateTime { get; set; }
 
         public int? MaterialID { get; set; }
 
