@@ -11,19 +11,11 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.CompoundLT)
+            @Html.DisplayNameFor(model => model.CustomerID)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CompoundLT)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DateDue)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DateDue)
+            @Html.DisplayFor(model => model.CustomerID)
         </dd>
 
         <dt>
@@ -35,6 +27,14 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.DueDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DueDate)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Status)
         </dt>
 
@@ -43,11 +43,35 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.ConfirmationSent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConfirmationSent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfirmationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConfirmationDate)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Comments)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeID)
         </dd>
 
     </dl>

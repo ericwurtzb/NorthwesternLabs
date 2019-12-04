@@ -12,8 +12,6 @@ namespace NorthwesternLabs.Models
         [Key]
         public int AssayID { get; set; }
 
-        public int? TestID { get; set; }
-
         [StringLength(50)]
         public string Desc { get; set; }
 
@@ -21,8 +19,6 @@ namespace NorthwesternLabs.Models
         public string Protocol { get; set; }
 
         public DateTime? CompletionEstimate { get; set; }
-
-        public int? EmployeeID { get; set; }
 
         public DateTime? DateTimeScheduled { get; set; }
 

@@ -12,8 +12,6 @@ namespace NorthwesternLabs.Models
         [Key]
         public int CustomerID { get; set; }
 
-        public int? WorkOrderID { get; set; }
-
         [StringLength(50)]
         public string FirstName { get; set; }
 
@@ -43,5 +41,8 @@ namespace NorthwesternLabs.Models
 
         [StringLength(50)]
         public string AccountNumber { get; set; }
+
+        [StringLength(50)]
+        public string UserName { get; set; }
     }
 }

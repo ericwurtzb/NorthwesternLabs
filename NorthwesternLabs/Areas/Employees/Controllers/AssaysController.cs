@@ -47,7 +47,7 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "AssayID,TestID,Desc,Protocol,CompletionEstimate,EmployeeID,DateTimeScheduled,DateTimeCompleted,BasePrice,ExtraTestNotes,ResultsLink")] Assay assay)
+        public ActionResult Create([Bind(Include = "AssayID,Desc,Protocol,CompletionEstimate,DateTimeScheduled,DateTimeCompleted,BasePrice,ExtraTestNotes,ResultsLink")] Assay assay)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "AssayID,TestID,Desc,Protocol,CompletionEstimate,EmployeeID,DateTimeScheduled,DateTimeCompleted,BasePrice,ExtraTestNotes,ResultsLink")] Assay assay)
+        public ActionResult Edit([Bind(Include = "AssayID,Desc,Protocol,CompletionEstimate,DateTimeScheduled,DateTimeCompleted,BasePrice,ExtraTestNotes,ResultsLink")] Assay assay)
         {
             if (ModelState.IsValid)
             {

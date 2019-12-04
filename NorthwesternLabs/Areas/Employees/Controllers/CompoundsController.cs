@@ -47,7 +47,7 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CompoundLT,CompoundName,DateArrived,ReceivedBy,Weight,Mass,ConfirmationDateTime,MTD")] Compound compound)
+        public ActionResult Create([Bind(Include = "CompoundLT,WorkOrderID,CompoundName,DateArrived,ReceivedBy,Weight,Mass,MTD")] Compound compound)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CompoundLT,CompoundName,DateArrived,ReceivedBy,Weight,Mass,ConfirmationDateTime,MTD")] Compound compound)
+        public ActionResult Edit([Bind(Include = "CompoundLT,WorkOrderID,CompoundName,DateArrived,ReceivedBy,Weight,Mass,MTD")] Compound compound)
         {
             if (ModelState.IsValid)
             {

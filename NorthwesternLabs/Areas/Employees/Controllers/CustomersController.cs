@@ -47,7 +47,7 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CustomerID,WorkOrderID,FirstName,LastName,Street,City,State,Zip,Phone,Email,RoutingNumber,AccountNumber")] Customer customer)
+        public ActionResult Create([Bind(Include = "CustomerID,FirstName,LastName,Street,City,State,Zip,Phone,Email,RoutingNumber,AccountNumber,UserName")] Customer customer)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CustomerID,WorkOrderID,FirstName,LastName,Street,City,State,Zip,Phone,Email,RoutingNumber,AccountNumber")] Customer customer)
+        public ActionResult Edit([Bind(Include = "CustomerID,FirstName,LastName,Street,City,State,Zip,Phone,Email,RoutingNumber,AccountNumber,UserName")] Customer customer)
         {
             if (ModelState.IsValid)
             {

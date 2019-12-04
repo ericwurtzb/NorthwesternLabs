@@ -11,6 +11,8 @@ namespace NorthwesternLabs.Models
         [Key]
         public int MaterialID { get; set; }
 
+        public int? TestID { get; set; }
+
         [StringLength(50)]
         public string Name { get; set; }
 

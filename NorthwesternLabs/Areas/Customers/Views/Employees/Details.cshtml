@@ -1,4 +1,4 @@
-﻿@model NorthwesternLabs.Models.Customer
+﻿@model NorthwesternLabs.Models.Employee
 
 @{
     ViewBag.Title = "Details";
@@ -7,9 +7,17 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Customer</h4>
+    <h4>Employee</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Wage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wage)
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.FirstName)
         </dt>
@@ -59,48 +67,32 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Phone)
+            @Html.DisplayNameFor(model => model.Location)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Phone)
+            @Html.DisplayFor(model => model.Location)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Email)
+            @Html.DisplayNameFor(model => model.Title)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Email)
+            @Html.DisplayFor(model => model.Title)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.RoutingNumber)
+            @Html.DisplayNameFor(model => model.Department)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.RoutingNumber)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AccountNumber)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AccountNumber)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.UserName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.UserName)
+            @Html.DisplayFor(model => model.Department)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerID }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EmployeeID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

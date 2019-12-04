@@ -12,13 +12,13 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.AssayID)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.TestType)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.RerunBool)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MaterialID)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.DateTimeScheduled)
@@ -32,13 +32,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.AssayID)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.TestType)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.RerunBool)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MaterialID)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.DateTimeScheduled)

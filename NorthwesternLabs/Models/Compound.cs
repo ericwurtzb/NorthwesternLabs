@@ -12,6 +12,8 @@ namespace NorthwesternLabs.Models
         [Key]
         public int CompoundLT { get; set; }
 
+        public int WorkOrderID { get; set; }
+
         [StringLength(50)]
         public string CompoundName { get; set; }
 
@@ -22,8 +24,6 @@ namespace NorthwesternLabs.Models
         public double? Weight { get; set; }
 
         public double? Mass { get; set; }
-
-        public DateTime? ConfirmationDateTime { get; set; }
 
         public double? MTD { get; set; }
     }

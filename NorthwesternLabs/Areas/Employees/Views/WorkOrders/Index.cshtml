@@ -12,19 +12,28 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.CompoundLT)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DateDue)
+            @Html.DisplayNameFor(model => model.CustomerID)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.InvoiceID)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.DueDate)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Status)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.ConfirmationSent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConfirmationDate)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Comments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeID)
         </th>
         <th></th>
     </tr>
@@ -32,19 +41,28 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.CompoundLT)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateDue)
+            @Html.DisplayFor(modelItem => item.CustomerID)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.InvoiceID)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.DueDate)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Status)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.ConfirmationSent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConfirmationDate)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Comments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeID)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.WorkOrderID }) |

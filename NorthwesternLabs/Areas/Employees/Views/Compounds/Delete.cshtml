@@ -12,6 +12,14 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
+            @Html.DisplayNameFor(model => model.WorkOrderID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkOrderID)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.CompoundName)
         </dt>
 
@@ -49,14 +57,6 @@
 
         <dd>
             @Html.DisplayFor(model => model.Mass)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ConfirmationDateTime)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ConfirmationDateTime)
         </dd>
 
         <dt>
