@@ -155,7 +155,6 @@
     <Compile Include="Areas\Employees\Controllers\CompoundsController.cs" />
     <Compile Include="Areas\Employees\Controllers\HomeController.cs" />
     <Compile Include="Areas\Employees\Controllers\testeriiiiiiiinoController.cs" />
-    <Compile Include="Areas\Employees\Controllers\TestsController.cs" />
     <Compile Include="Areas\Employees\EmployeesAreaRegistration.cs" />
     <Compile Include="Areas\Employees\Controllers\MaterialsController.cs" />
     <Compile Include="Controllers\WorkOrdersController.cs" />
