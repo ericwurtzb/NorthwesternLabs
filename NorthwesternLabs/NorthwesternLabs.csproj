@@ -171,6 +171,7 @@
     <Content Include="Areas\Employees\Views\Users\Details.cshtml" />
     <Content Include="Areas\Employees\Views\Users\Edit.cshtml" />
     <Content Include="Areas\Employees\Views\Users\Index.cshtml" />
+    <Content Include="Areas\Customers\Views\CustHome\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -186,6 +187,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Customers\Controllers\CustHomeController.cs" />
     <Compile Include="Areas\Customers\CustomersAreaRegistration.cs" />
     <Compile Include="Areas\Customers\EmployeesController.cs" />
     <Compile Include="Areas\Employees\Controllers\AssaysController.cs" />
@@ -239,7 +241,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Customers\Controllers\" />
     <Folder Include="Areas\Customers\Models\" />
     <Folder Include="Areas\Employees\Models\" />
   </ItemGroup>
