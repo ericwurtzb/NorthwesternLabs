@@ -37,16 +37,17 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
 
             IEnumerable<User> currentUser =
                  db.Database.SqlQuery<User>(
-             "Select *, 'Employee' " +
-             "FROM [Employee_User] " +
+             "Select EmployeeID as IDNum, Username, Password, 'Employee' as Role " +
+             "FROM [Employee_Users] " +
              "WHERE Username = '" + username + "' AND " +
-             "Password = '" + password + "'" +
-            "UNION" +
+             "Password = '" + password + "' " +
+            "UNION ALL " +
             "Select *, 'Customer' " +
-             "FROM [Customer_User] " +
+             "FROM [Customer_Users] " +
              "WHERE Username = '" + username + "' AND " +
-             "Password = '" + password + "'"
+             "Password = '" + password + "';"
             );
+
             if (currentUser.Count() > 0)
             {
                 FormsAuthentication.SetAuthCookie(username, rememberMe);
@@ -54,12 +55,12 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
                 if (currentUser.First().Role == "Customer")
                 {
                     //return customer page
-                    Roles.AddUserToRole(currentUser.First().Username, "Customer");
+                    
                     return RedirectToAction("Index", "CustHome", new { area = "Customers" });
                     //return Content("employee");
                 }
 
-                if (currentUser.First().Role != "Employee")
+                if (currentUser.First().Role == "Employee")
                 {
 
                     return RedirectToAction("Index", "Home");
