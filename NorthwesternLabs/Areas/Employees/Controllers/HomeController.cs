@@ -8,6 +8,8 @@ using System.Security.Claims;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using Microsoft.AspNet.Identity;
+using Microsoft.Owin;
 
 namespace NorthwesternLabs.Areas.Employees.Controllers
 {
@@ -28,42 +30,40 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(FormCollection form, bool rememberMe = false)
+        public ActionResult Login(System.Web.Mvc.FormCollection form, bool rememberMe = false)
         {
             String username = form["Username"].ToString();
             String password = form["Password"].ToString();
 
-           IEnumerable<User> currentUser =
-                db.Database.SqlQuery<User>(
-            "Select * " +
-            "FROM [User] " +
-            "WHERE Username = '" + username + "' AND " +
-            "Password = '" + password + "'");
-            
-
+            IEnumerable<User> currentUser =
+                 db.Database.SqlQuery<User>(
+             "Select *, 'Employee' " +
+             "FROM [Employee_User] " +
+             "WHERE Username = '" + username + "' AND " +
+             "Password = '" + password + "'" +
+            "UNION" +
+            "Select *, 'Customer' " +
+             "FROM [Customer_User] " +
+             "WHERE Username = '" + username + "' AND " +
+             "Password = '" + password + "'"
+            );
             if (currentUser.Count() > 0)
             {
-
                 FormsAuthentication.SetAuthCookie(username, rememberMe);
-          
 
-
-                if (currentUser.First().CustomerID != null)
+                if (currentUser.First().Role == "Customer")
                 {
                     //return customer page
-                    //Roles.AddUserToRole(currentUser.First().Username, "Customer");
-                   
-
+                    Roles.AddUserToRole(currentUser.First().Username, "Customer");
                     return RedirectToAction("Index", "CustHome", new { area = "Customers" });
-                }
-                
-                if (currentUser.First().EmployeeID != null)
-                {
-                 
-                    return RedirectToAction("Index", "Home");
-                    
+                    //return Content("employee");
                 }
 
+                if (currentUser.First().Role != "Employee")
+                {
+
+                    return RedirectToAction("Index", "Home");
+                }
 
                 return Content("not found");
 
@@ -73,29 +73,7 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
                 return View();
             }
         }
-
-        // GET: Employees/Users/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Employees/Users/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Username,Password,CustomerID,EmployeeID")] User user)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Users.Add(user);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
-            return View(user);
-        }
+       
 
     }
 }

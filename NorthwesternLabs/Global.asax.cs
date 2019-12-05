@@ -16,6 +16,7 @@ namespace NorthwesternLabs
             Database.SetInitializer<NorthwesternLabsContext>(null);
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+           
         }
     }
 }
