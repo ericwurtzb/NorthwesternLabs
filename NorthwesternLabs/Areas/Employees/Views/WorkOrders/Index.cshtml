@@ -9,6 +9,19 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+<br />
+<br />
+<div>
+    @using (Html.BeginForm("Index", "WorkOrders", FormMethod.Get))
+    {
+    <div>
+        <label>Customer ID: &nbsp;</label><input id="id" name="id" type="text" />
+        <input style="height:35px; width:100px" class="btn btn-primary btn-sm bluebtn" type="submit" value="Search" />
+    </div>
+    }
+</div>
+<br />
+<br />
 <table class="table">
     <tr>
         <th>
