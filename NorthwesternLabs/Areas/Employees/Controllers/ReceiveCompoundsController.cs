@@ -208,10 +208,10 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
             {
                 UseDefaultCredentials = false,
                 //Aaron will provide password during grading with TAs
-                Credentials = new NetworkCredential("aaronjhayden@gmail.com", "byu221byu"),
+                Credentials = new NetworkCredential("nwlintex@gmail.com", "Intex19!"),
                 EnableSsl = true
             };
-            client.Send("aaronjhayden@gmail.com", sEmail, "test", string.Format("Thank you {0}. We have received your chemical compounds. You can track the progress of your work order on your customer portal. Link: www.letsgo.com Northwest Labs", sName, sEmail));
+            client.Send("nwlintex@gmail.com", sEmail, "Compound Confirmation", string.Format("Thank you {0}. We have received your chemical compounds. You can track the progress of your work order on your customer portal. Link: https://northwestlabs2-16.azurewebsites.net/Home/ Northwest Labs", sName, sEmail));
 
             return RedirectToAction("Index", "Home");
         }
