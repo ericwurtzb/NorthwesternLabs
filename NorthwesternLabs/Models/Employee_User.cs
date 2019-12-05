@@ -7,11 +7,14 @@ using System.Web;
 
 namespace NorthwesternLabs.Models
 {
-    public class User
+    [Table("Employee_User")]
+    public class Employee_User
     {
-        public int? IDNum { get; set; }
+        [Key]
+        public int EmployeeID { get; set; }
         public string Username { get; set; }
         public string Password {get; set;}
-        public string Role { get; set; }
+        
+     
     }
 }

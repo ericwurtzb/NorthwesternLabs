@@ -36,6 +36,8 @@ namespace NorthwesternLabs.DAL
 
         public System.Data.Entity.DbSet<NorthwesternLabs.Models.Test> Tests { get; set; }
 
-        public System.Data.Entity.DbSet<User> Users { get; set; }
+        public System.Data.Entity.DbSet<Customer_User> Customer_Users { get; set; }
+
+        public System.Data.Entity.DbSet<Employee_User> Employee_Users { get; set; }
     }
 }
