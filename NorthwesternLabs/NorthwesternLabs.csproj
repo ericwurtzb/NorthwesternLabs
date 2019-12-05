@@ -153,11 +153,6 @@
     <Content Include="Areas\Employees\Views\Assays\Details.cshtml" />
     <Content Include="Areas\Employees\Views\Assays\Edit.cshtml" />
     <Content Include="Areas\Employees\Views\Assays\Index.cshtml" />
-    <Content Include="Areas\Employees\Views\CompoundSamples\Create.cshtml" />
-    <Content Include="Areas\Employees\Views\CompoundSamples\Delete.cshtml" />
-    <Content Include="Areas\Employees\Views\CompoundSamples\Details.cshtml" />
-    <Content Include="Areas\Employees\Views\CompoundSamples\Edit.cshtml" />
-    <Content Include="Areas\Employees\Views\CompoundSamples\Index.cshtml" />
     <Content Include="Areas\Employees\Views\Customers\Create.cshtml" />
     <Content Include="Areas\Employees\Views\Customers\Delete.cshtml" />
     <Content Include="Areas\Employees\Views\Customers\Details.cshtml" />
@@ -227,6 +222,11 @@
     <Content Include="Areas\Customers\Views\Referrals\Edit.cshtml" />
     <Content Include="Areas\Customers\Views\Referrals\Index.cshtml" />
     <Content Include="Areas\Customers\Views\Referrals\Thank.cshtml" />
+    <Content Include="Areas\Employees\Views\CompoundSamples\Create.cshtml" />
+    <Content Include="Areas\Employees\Views\CompoundSamples\Delete.cshtml" />
+    <Content Include="Areas\Employees\Views\CompoundSamples\Details.cshtml" />
+    <Content Include="Areas\Employees\Views\CompoundSamples\Edit.cshtml" />
+    <Content Include="Areas\Employees\Views\CompoundSamples\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

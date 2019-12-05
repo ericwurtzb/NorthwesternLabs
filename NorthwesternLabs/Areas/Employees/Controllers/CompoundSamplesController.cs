@@ -22,13 +22,13 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
         }
 
         // GET: Employees/CompoundSamples/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int? CompoundLT, int? CompoundSequenceCode)
         {
-            if (id == null)
+            if (CompoundLT == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CompoundSample compoundSample = db.CompoundSamples.Find(id);
+            CompoundSample compoundSample = db.CompoundSamples.Find(CompoundLT, CompoundSequenceCode);
             if (compoundSample == null)
             {
                 return HttpNotFound();
@@ -60,13 +60,13 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
         }
 
         // GET: Employees/CompoundSamples/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int? CompoundLT, int? CompoundSequenceCode)
         {
-            if (id == null)
+            if (CompoundLT == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CompoundSample compoundSample = db.CompoundSamples.Find(id);
+            CompoundSample compoundSample = db.CompoundSamples.Find(CompoundLT, CompoundSequenceCode);
             if (compoundSample == null)
             {
                 return HttpNotFound();
@@ -91,13 +91,13 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
         }
 
         // GET: Employees/CompoundSamples/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(int? CompoundLT, int? CompoundSequenceCode)
         {
-            if (id == null)
+            if (CompoundLT == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CompoundSample compoundSample = db.CompoundSamples.Find(id);
+            CompoundSample compoundSample = db.CompoundSamples.Find(CompoundLT, CompoundSequenceCode);
             if (compoundSample == null)
             {
                 return HttpNotFound();
@@ -108,9 +108,9 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
         // POST: Employees/CompoundSamples/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(int? CompoundLT, int? CompoundSequenceCode)
         {
-            CompoundSample compoundSample = db.CompoundSamples.Find(id);
+            CompoundSample compoundSample = db.CompoundSamples.Find(CompoundLT, CompoundSequenceCode);
             db.CompoundSamples.Remove(compoundSample);
             db.SaveChanges();
             return RedirectToAction("Index");
