@@ -22,7 +22,8 @@ textarea {
 .bluebtn {
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
-    background: #4F4CFF !important;
+    /*background: #4F4CFF !important;*/
+    background: #2d6a96 !important;
     border-radius: 4px;
     border: none;
     color: white !important;
@@ -31,7 +32,8 @@ textarea {
 }
 
 .bluebtn:hover {
-    background-color: #403DD4 !important;
+    /*background-color: #403DD4 !important;*/
+    background-color: #255c85 !important;
 }
 
 div.checkbox {
@@ -63,4 +65,49 @@ td {
 .blue-uppercase {
     text-transform: uppercase;
     color: #4f4cff;
+}
+
+/*flexbox styling*/
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.flexbox > a {
+    color: #112e5a;
+    flex: 25%;
+}
+
+.flexbox > a:hover {
+    text-decoration: none;
+}
+
+.flexbox > a > div {
+    /*height: 170px;
+    width: 150px;*/
+    height: 200px;
+    width: 200px;
+    border: 1px solid #F0F8F8;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin: 5px;
+    box-shadow: 0px 16px 16px rgba(50, 50, 71, 0.06), 0px 8px 8px rgba(50, 50, 71, 0.08);
+}
+
+.flexbox > a > div:hover {
+    background-color: #f7f7f7;
+}
+
+.flexbox > a > p {
+    font-weight: bold;
+}
+
+.flexbox > a > div > img {
+    width: 80px;
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }

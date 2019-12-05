@@ -3,11 +3,89 @@
     ViewBag.Title = "Index";
 }
 
-<br />
-<br />
-<br />
-<br />
 <center>
+    <center>
+        <div class="flexbox">
+            <a href="/Employees/ReceiveCompounds/Create">
+                <div>
+                    <img src="~/Content/Images/box.png" />
+                    <strong><p>Receive Compound</p></strong>
+                </div>
+            </a>
+            <a href="#">
+                <div>
+                    <img src="~/Content/Images/fast-forward-double-right-arrows.png" />
+                    <strong><p>Prepare Compound Samples</p></strong>
+                </div>
+            </a>
+            <a href="#">
+                <div>
+                    <img src="~/Content/Images/analysis.png" />
+                    <strong><p>Upload Test Results</p></strong>
+                </div>
+            </a>
+            <a href="#">
+                <div>
+                    <img src="~/Content/Images/calendar.png" />
+                    <strong><p>View Testing Schedule</p></strong>
+                </div>
+            </a>
+            <a href="#">
+                <div>
+                    <img src="~/Content/Images/tag.png" />
+                    <strong><p>Apply Discounts</p></strong>
+                </div>
+            </a>
+            <a href="#">
+                <div>
+                    <img src="~/Content/Images/pamphlet.png" />
+                    <strong><p>Maintain and Publish Catalogs</p></strong>
+                </div>
+            </a>
+            <a href="#">
+                <div>
+                    <img src="~/Content/Images/box.png" />
+                    <strong><p>Maintain Work Orders</p></strong>
+                </div>
+            </a>
+            <a href="#">
+                <div>
+                    <img src="~/Content/Images/newspaper.png" />
+                    <strong><p>Upload Summary Report</p></strong>
+                </div>
+            </a>
+        </div>
+    </center>
+
+
+    <hr />
+
+    @Html.ActionLink("Work Orders", "Index", "WorkOrders", null, htmlAttributes: new { @class = "btn btn-primary bluebtn", @role = "button" })
+    @Html.ActionLink("Compound Samples", "Index", "CompoundSamples", null, htmlAttributes: new { @class = "btn btn-primary bluebtn", @role = "button" })
+    @Html.ActionLink("Employees", "Index", "Employees", null, htmlAttributes: new { @class = "btn btn-primary bluebtn", @role = "button" })
+    @Html.ActionLink("Customers", "Index", "Customers", null, htmlAttributes: new { @class = "btn btn-primary bluebtn", @role = "button" })
+
+    <br />
+    <br />
+
+    @Html.ActionLink("Tests", "Index", "Tests", null, htmlAttributes: new { @class = "btn btn-primary bluebtn", @role = "button" })
+    @Html.ActionLink("Materials", "Index", "Materials", null, htmlAttributes: new { @class = "btn btn-primary bluebtn", @role = "button" })
+    @Html.ActionLink("Assays", "Index", "Assays", null, htmlAttributes: new { @class = "btn btn-primary bluebtn", @role = "button" })
+    @Html.ActionLink("Compounds", "Index", "Compounds", null, htmlAttributes: new { @class = "btn btn-primary bluebtn", @role = "button" })
+
+    <br />
+    <br />
+
+    @Html.ActionLink("Invoices", "Index", "Invoices", null, htmlAttributes: new { @class = "btn btn-primary bluebtn", @role = "button" })
+
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+
     @Html.ActionLink("Receive Compounds", "Create", "ReceiveCompounds", null, htmlAttributes: new { @class = "btn btn-primary bluebtn", @role = "button" })
     <br />
     <br />
