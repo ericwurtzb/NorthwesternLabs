@@ -274,6 +274,7 @@
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\Material.cs" />
     <Compile Include="Models\Referral.cs" />
+    <Compile Include="Models\Status.cs" />
     <Compile Include="Models\Test.cs" />
     <Compile Include="Models\Customer_User.cs" />
     <Compile Include="Models\Employee_User.cs" />
