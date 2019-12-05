@@ -6,34 +6,53 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using NorthwesternLabs.DAL;
 using NorthwesternLabs.Models;
 
-namespace NorthwesternLabs.Areas.Employees.Controllers
+namespace NorthwesternLabs.Areas.Customers.Controllers
 {
-    public class WorkOrdersController : Controller
+    public class CustWorkOrdersController : Controller
     {
         private NorthwesternLabsContext db = new NorthwesternLabsContext();
 
-        // GET: Employees/WorkOrders
-        public ActionResult Index(int? id)
+        // GET: Customers/CustWorkOrders
+        public ActionResult Index()
         {
+            string cookieName = FormsAuthentication.FormsCookieName; //Find cookie name
+            HttpCookie authCookie = HttpContext.Request.Cookies[cookieName]; //Get the cookie by it's name
+            FormsAuthenticationTicket ticket = FormsAuthentication.Decrypt(authCookie.Value); //Decrypt it
+            string UserName = ticket.Name; //Username is here!
 
-            if (id != null)
-            {
-                var currentWorkOrder =
-                db.Database.SqlQuery<WorkOrder>(
-                "Select * " +
-                "FROM WorkOrder " +
-                "WHERE CustomerID = '" + id + "'");
+            IEnumerable<Customer_User> query = db.Database.SqlQuery<Customer_User>("SELECT * FROM Customer_Users WHERE Username = '" + UserName + "'");
 
-                return View(currentWorkOrder);
-            }
+            int CurrentCustID = query.First().CustomerID;
 
-            return View(db.WorkOrder.ToList());
+            return View(db.WorkOrder.Where(a => a.CustomerID == CurrentCustID));
         }
 
-        // GET: Employees/WorkOrders/Details/5
+        public ActionResult ViewTesting(int id)
+        {
+            return View(db.Compounds.Where(a => a.WorkOrderID == id));
+        }
+
+        public ActionResult ViewInvoice(int id)
+        {
+            Invoice invoice = db.Invoices.Find(id);
+            return View(invoice);
+        }
+
+        public ActionResult ViewAssays(int id)
+        {
+            IEnumerable<AssayInfo> list = db.Database.SqlQuery<AssayInfo>("SELECT Compound.CompoundLT, CompoundSequenceCode, [Desc], CompletionEstimate, Datetimescheduled, ExtraTestNotes, ResultsLink " +
+                                            "FROM Compound INNER JOIN CompoundSample ON CompoundSample.CompoundLT = Compound.CompoundLT " +
+                                            "INNER JOIN ASSAY ON Assay.AssayID = CompoundSample.AssayID " +
+                                            "WHERE Compound.CompoundLT = " + id);
+     
+            return View(list);
+        }
+
+        // GET: Customers/CustWorkOrders/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -48,13 +67,13 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
             return View(workOrder);
         }
 
-        // GET: Employees/WorkOrders/Create
+        // GET: Customers/CustWorkOrders/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Employees/WorkOrders/Create
+        // POST: Customers/CustWorkOrders/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -71,7 +90,7 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
             return View(workOrder);
         }
 
-        // GET: Employees/WorkOrders/Edit/5
+        // GET: Customers/CustWorkOrders/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -86,7 +105,7 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
             return View(workOrder);
         }
 
-        // POST: Employees/WorkOrders/Edit/5
+        // POST: Customers/CustWorkOrders/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -102,7 +121,7 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
             return View(workOrder);
         }
 
-        // GET: Employees/WorkOrders/Delete/5
+        // GET: Customers/CustWorkOrders/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -117,7 +136,7 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
             return View(workOrder);
         }
 
-        // POST: Employees/WorkOrders/Delete/5
+        // POST: Customers/CustWorkOrders/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

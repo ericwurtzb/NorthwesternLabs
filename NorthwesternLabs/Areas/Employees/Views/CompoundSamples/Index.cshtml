@@ -35,9 +35,9 @@
             @Html.DisplayFor(modelItem => item.Appearance)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "Edit", new { CompoundLT = item.CompoundLT, CompoundSequenceCode = item.CompoundSequenceCode }) |
+            @Html.ActionLink("Details", "Details", new { CompoundLT = item.CompoundLT, CompoundSequenceCode = item.CompoundSequenceCode }) |
+            @Html.ActionLink("Delete", "Delete", new { CompoundLT = item.CompoundLT, CompoundSequenceCode = item.CompoundSequenceCode })
         </td>
     </tr>
 }

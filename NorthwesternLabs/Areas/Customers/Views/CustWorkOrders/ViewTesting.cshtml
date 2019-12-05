@@ -1,0 +1,74 @@
+﻿@model IEnumerable<NorthwesternLabs.Models.Compound>
+
+@{
+    ViewBag.Title = "ViewTesting";
+}
+
+<h2>ViewTesting</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CompoundLT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkOrderID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompoundName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateArrived)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReceivedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MTD)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompoundLT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkOrderID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompoundName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateArrived)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReceivedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Weight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MTD)
+        </td>
+        <td>
+            @Html.ActionLink("Assay", "ViewAssays", new { id = item.CompoundLT })
+
+        </td>
+    </tr>
+}
+
+</table>

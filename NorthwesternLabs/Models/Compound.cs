@@ -25,7 +25,7 @@ namespace NorthwesternLabs.Models
         public DateTime? DateArrived { get; set; }
 
         [DisplayName("Date Received By")]
-        public int? ReceivedBy { get; set; }
+        public DateTime? ReceivedBy { get; set; }
 
         public double? Weight { get; set; }
 

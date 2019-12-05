@@ -17,9 +17,21 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
         private NorthwesternLabsContext db = new NorthwesternLabsContext();
         public static int newCurrentWorkOrder;
 
+        public static List<Status> lstStatus = new List<Status>()
+        {
+            new Status {StatusID = 1, StatusDesc = "Received"},
+            new Status {StatusID = 2, StatusDesc = "Scheduled"},
+            new Status {StatusID = 3, StatusDesc = "Awaiting Test"},
+            new Status {StatusID = 4, StatusDesc = "Require Tests"},
+            new Status {StatusID = 5, StatusDesc = "Additional Testing"},
+            new Status {StatusID = 5, StatusDesc = "Analyzing Results"},
+            new Status {StatusID = 5, StatusDesc = "Results Delivered"}
+        };
+
         // GET: Employees/WorkOrders/Create
         public ActionResult Create()
         {
+            ViewBag.Status = lstStatus;
             return View();
         }
 

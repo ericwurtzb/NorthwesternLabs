@@ -1,0 +1,57 @@
+﻿@model NorthwesternLabs.Models.Invoice
+
+@{
+    ViewBag.Title = "ViewInvoice";
+}
+
+<h2>ViewInvoice</h2>
+
+<div>
+    <h4>Invoice</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DueDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DueDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EarlyPaymentDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EarlyPaymentDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdvancedPaymentAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdvancedPaymentAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalDue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalDue)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

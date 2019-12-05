@@ -39,5 +39,9 @@ namespace NorthwesternLabs.DAL
         public System.Data.Entity.DbSet<Customer_User> Customer_Users { get; set; }
 
         public System.Data.Entity.DbSet<Employee_User> Employee_Users { get; set; }
+
+        public System.Data.Entity.DbSet<NorthwesternLabs.Models.AssayInfo> AssayInfoes { get; set; }
+
+        public System.Data.Entity.DbSet<NorthwesternLabs.Models.Referral> Referrals { get; set; }
     }
 }
