@@ -101,6 +101,13 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\analysis.png" />
+    <Content Include="Content\Images\box.png" />
+    <Content Include="Content\Images\calendar.png" />
+    <Content Include="Content\Images\fast-forward-double-right-arrows.png" />
+    <Content Include="Content\Images\newspaper.png" />
+    <Content Include="Content\Images\pamphlet.png" />
+    <Content Include="Content\Images\tag.png" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

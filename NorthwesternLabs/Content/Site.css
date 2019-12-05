@@ -47,10 +47,6 @@ td {
     text-transform: none;
 }
 
-.edit-details-delete {
-    text-transform: uppercase;
-}
-
 .login-form {
     padding: 5px;
 }
@@ -62,4 +58,9 @@ td {
     text-transform: uppercase;
     padding: 5px;
     width: 200px;
+}
+
+.blue-uppercase {
+    text-transform: uppercase;
+    color: #4f4cff;
 }

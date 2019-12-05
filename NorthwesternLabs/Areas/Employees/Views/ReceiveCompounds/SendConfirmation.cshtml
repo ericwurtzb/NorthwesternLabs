@@ -1,28 +1,25 @@
-﻿
-@{
-    ViewBag.Title = "SendConfirmation";
+﻿@{
+    ViewBag.Title = "Send Confirmation Email";
 }
+
 
 <h2>Send Confirmation</h2>
 
-
-@{
-    ViewBag.Title = "Email";
-}
-
 <!--input form-->
+<br />
 <form action="SendConfirmation" method="post">
     <table>
         <tr>
-            <td>Enter Name: </td>
-            <td><input type="text" name="sName" /></td>
+            <td class="blue-uppercase">Enter Name: </td>
+            <td><input type="text" name="sName" class="login-input" /></td>
+        </tr>
+        <br />
+        <tr>
+            <td class="blue-uppercase">Enter Email: </td>
+            <td><input type="text" name="sEmail" class="login-input" /></td>
         </tr>
         <tr>
-            <td>Enter Email: </td>
-            <td><input type="text" name="sEmail" /></td>
-        </tr>
-        <tr>
-            <td colspan="2"><input type="submit" value="Submit Form" /></td>
+            <td colspan="2"><input type="submit" value="Submit Form" class="bluebtn" style="height:30px" /></td>
         </tr>
     </table>
 </form>
