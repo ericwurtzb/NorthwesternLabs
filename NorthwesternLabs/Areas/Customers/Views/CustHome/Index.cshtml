@@ -3,5 +3,36 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index from customers area - home controller</h2>
-
+<center>
+    <center>
+        <div class="flexbox">
+            <a href="/Customers/CustWorkOrders/Index">
+                <div>
+                    <img src="~/Content/Images/workorder.png" />
+                    <strong><p>View Orders</p></strong>
+                </div>
+            </a>
+            <a href="/Customers/Referrals/Create">
+                <div>
+                    <img src="~/Content/Images/referral.png" />
+                    <strong><p>Give A Referral</p></strong>
+                </div>
+            </a>
+        </div>
+    </center>
+</center>
+<style>
+    .bluebtn {
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        background: #4F4CFF;
+        border-radius: 4px;
+        border: none;
+        color: white;
+        width: 200px;
+        margin: 5px 10px;
+    }
+    .bluebtn:hover {
+        background-color: #403DD4;
+    }
+</style>

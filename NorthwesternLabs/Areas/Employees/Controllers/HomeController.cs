@@ -21,6 +21,10 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
         [Authorize]
         public ActionResult Index()
         {
+            string cookieName = FormsAuthentication.FormsCookieName; //Find cookie name
+            HttpCookie authCookie = HttpContext.Request.Cookies[cookieName]; //Get the cookie by it's name
+            FormsAuthenticationTicket ticket = FormsAuthentication.Decrypt(authCookie.Value); //Decrypt it
+            string UserName = ticket.Name; //You have the UserName!
             return View();
         }
 

@@ -131,7 +131,9 @@
     <Content Include="Content\Images\fast-forward-double-right-arrows.png" />
     <Content Include="Content\Images\newspaper.png" />
     <Content Include="Content\Images\pamphlet.png" />
+    <Content Include="Content\Images\referral.png" />
     <Content Include="Content\Images\tag.png" />
+    <Content Include="Content\Images\workorder.png" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -142,7 +144,6 @@
     <Content Include="Areas\Employees\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Customers\Views\web.config" />
     <Content Include="Areas\Customers\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\Customers\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Customers\Views\View.cshtml" />
     <Content Include="Areas\Employees\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Employees\Views\TestSchedules\Index.cshtml" />
@@ -202,7 +203,6 @@
     <Content Include="Areas\Employees\Views\Users\Details.cshtml" />
     <Content Include="Areas\Employees\Views\Users\Edit.cshtml" />
     <Content Include="Areas\Employees\Views\Users\Index.cshtml" />
-    <Content Include="Areas\Customers\Views\CustHome\Index.cshtml" />
     <Content Include="Areas\Employees\Views\ReceiveCompounds\Create.cshtml" />
     <Content Include="Areas\Employees\Views\ReceiveCompounds\CompoundList.cshtml" />
     <Content Include="Areas\Employees\Views\ReceiveCompounds\CompoundCreate.cshtml" />
@@ -210,6 +210,22 @@
     <Content Include="Areas\Employees\Views\ReceiveCompounds\Details.cshtml" />
     <Content Include="Areas\Employees\Views\ReceiveCompounds\Delete.cshtml" />
     <Content Include="Areas\Employees\Views\ReceiveCompounds\SendConfirmation.cshtml" />
+    <Content Include="Areas\Customers\Views\CustHome\Index.cshtml" />
+    <Content Include="Areas\Customers\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Customers\Views\CustWorkOrders\Index.cshtml" />
+    <Content Include="Areas\Customers\Views\CustWorkOrders\Create.cshtml" />
+    <Content Include="Areas\Customers\Views\CustWorkOrders\Delete.cshtml" />
+    <Content Include="Areas\Customers\Views\CustWorkOrders\Details.cshtml" />
+    <Content Include="Areas\Customers\Views\CustWorkOrders\Edit.cshtml" />
+    <Content Include="Areas\Customers\Views\CustWorkOrders\ViewTesting.cshtml" />
+    <Content Include="Areas\Customers\Views\CustWorkOrders\ViewInvoice.cshtml" />
+    <Content Include="Areas\Customers\Views\CustWorkOrders\ViewAssays.cshtml" />
+    <Content Include="Areas\Customers\Views\Referrals\Create.cshtml" />
+    <Content Include="Areas\Customers\Views\Referrals\Delete.cshtml" />
+    <Content Include="Areas\Customers\Views\Referrals\Details.cshtml" />
+    <Content Include="Areas\Customers\Views\Referrals\Edit.cshtml" />
+    <Content Include="Areas\Customers\Views\Referrals\Index.cshtml" />
+    <Content Include="Areas\Customers\Views\Referrals\Thank.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -226,6 +242,8 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Customers\Controllers\CustHomeController.cs" />
+    <Compile Include="Areas\Customers\Controllers\CustWorkOrdersController.cs" />
+    <Compile Include="Areas\Customers\Controllers\ReferralsController.cs" />
     <Compile Include="Areas\Customers\CustomersAreaRegistration.cs" />
     <Compile Include="Areas\Customers\EmployeesController.cs" />
     <Compile Include="Areas\Employees\Controllers\AssaysController.cs" />
@@ -247,12 +265,14 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Assay.cs" />
+    <Compile Include="Models\AssayInfo.cs" />
     <Compile Include="Models\Compound.cs" />
     <Compile Include="Models\CompoundSample.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\Material.cs" />
+    <Compile Include="Models\Referral.cs" />
     <Compile Include="Models\Test.cs" />
     <Compile Include="Models\Customer_User.cs" />
     <Compile Include="Models\Employee_User.cs" />
