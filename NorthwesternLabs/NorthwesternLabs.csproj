@@ -227,6 +227,7 @@
     <Content Include="Areas\Employees\Views\CompoundSamples\Details.cshtml" />
     <Content Include="Areas\Employees\Views\CompoundSamples\Edit.cshtml" />
     <Content Include="Areas\Employees\Views\CompoundSamples\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\northwestlabs2-16 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
