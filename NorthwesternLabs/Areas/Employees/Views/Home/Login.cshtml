@@ -14,20 +14,20 @@
 
     <br />
 
-        @using (Html.BeginForm("Login", "Home", FormMethod.Post))
-        {
-    <div class="login-form">
-        <!--<label for="inputUserName">Username:</label>-->
-        @Html.TextBox("Username", "Username", new { @class = "login-input" })
-        <!--<br />
-        @Html.TextBox("Username", null, new { placeholder = "Username" })-->
-    </div>
-            <div class="login-form">
-                <!--<label for="inputPassword">Password:</label>-->
-                @Html.Password("Password", "Passworddddd", new { @class = "login-input" })
-            </div>
-            <button type="submit" class="bluebtn" style="height: 40px;">Log In</button>
-        }
+    @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+    {
+        <div class="login-form">
+            <!--<label for="inputUserName">Username:</label>-->
+            @Html.TextBox("Username", "Username", new { @class = "login-input" })
+            <!--<br />
+            @Html.TextBox("Username", null, new { placeholder = "Username" })-->
+        </div>
+        <div class="login-form">
+            <!--<label for="inputPassword">Password:</label>-->
+            @Html.Password("Password", "Passworddddd", new { @class = "login-input" })
+        </div>
+        <button type="submit" class="bluebtn" style="height: 40px;">Log In</button>
+    }
 
     <br />
     <br />

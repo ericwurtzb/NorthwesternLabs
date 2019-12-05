@@ -130,6 +130,7 @@
     <Content Include="Content\Images\calendar.png" />
     <Content Include="Content\Images\fast-forward-double-right-arrows.png" />
     <Content Include="Content\Images\newspaper.png" />
+    <Content Include="Content\Images\package.png" />
     <Content Include="Content\Images\pamphlet.png" />
     <Content Include="Content\Images\referral.png" />
     <Content Include="Content\Images\tag.png" />

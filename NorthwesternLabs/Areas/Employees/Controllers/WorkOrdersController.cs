@@ -16,8 +16,20 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
         private NorthwesternLabsContext db = new NorthwesternLabsContext();
 
         // GET: Employees/WorkOrders
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
+
+            if (id != null)
+            {
+                var currentWorkOrder =
+                db.Database.SqlQuery<WorkOrder>(
+                "Select * " +
+                "FROM WorkOrder " +
+                "WHERE CustomerID = '" + id + "'");
+
+                return View(currentWorkOrder);
+            }
+
             return View(db.WorkOrder.ToList());
         }
 

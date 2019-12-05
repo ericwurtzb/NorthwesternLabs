@@ -55,8 +55,8 @@ td {
 
 .login-input {
     border-radius: 4px;
-    color: #4f4cff;
-    border: 1px solid #4f4cff;
+    color: #2d6a96;
+    border: 1px solid #2d6a96;
     text-transform: uppercase;
     padding: 5px;
     width: 200px;
@@ -68,23 +68,23 @@ td {
 }
 
 /*flexbox styling*/
-.flexbox {
+.flex-box {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 30px;
 }
 
-.flexbox > a {
+.flex-box > a {
     color: #112e5a;
     flex: 25%;
 }
 
-.flexbox > a:hover {
+.flex-box > a:hover {
     text-decoration: none;
 }
 
-.flexbox > a > div {
+.flex-box > a > div {
     /*height: 170px;
     width: 150px;*/
     height: 200px;
@@ -96,15 +96,15 @@ td {
     box-shadow: 0px 16px 16px rgba(50, 50, 71, 0.06), 0px 8px 8px rgba(50, 50, 71, 0.08);
 }
 
-.flexbox > a > div:hover {
+.flex-box > a > div:hover {
     background-color: #f7f7f7;
 }
 
-.flexbox > a > p {
+.flex-box > a > p {
     font-weight: bold;
 }
 
-.flexbox > a > div > img {
+.flex-box > a > div > img {
     width: 80px;
     margin-top: 40px;
     margin-right: 20px;
