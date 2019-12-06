@@ -1,5 +1,6 @@
 ﻿//Eric Wurtzbacher, Aaron Hayden, Katie Bankhead, Ryan Ham 2-16
 //Last edited: 12/5
+//hosted on http://northwestlabs2-16.azurewebsites.net/
 
 //This is the main "Home Controller" for the website - it has the 
 // login page, which directs to two different landing pages (customer, employee)
