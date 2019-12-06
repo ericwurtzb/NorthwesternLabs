@@ -9,6 +9,8 @@ using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
 
+//for the first tile on the employee portal
+
 namespace NorthwesternLabs.Areas.Employees.Controllers
 {
     public class ReceiveCompoundsController : Controller

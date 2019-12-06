@@ -14,6 +14,7 @@ namespace NorthwesternLabs.Areas.Customers.Controllers
     {
         private NorthwesternLabsContext db = new NorthwesternLabsContext();
         // GET: Employees/Home
+        // returns customer landing page
         [Authorize]
         public ActionResult Index()
         {

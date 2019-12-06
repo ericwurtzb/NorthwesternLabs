@@ -1,4 +1,11 @@
-﻿using NorthwesternLabs.DAL;
+﻿//Eric Wurtzbacher, Aaron Hayden, Katie Bankhead, Ryan Ham 2-16
+//Last edited: 12/5
+
+//This is the main "Home Controller" for the website - it has the 
+// login page, which directs to two different landing pages (customer, employee)
+
+
+using NorthwesternLabs.DAL;
 using NorthwesternLabs.Models;
 using System;
 using System.Collections.Generic;
@@ -18,13 +25,14 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
     {
         private NorthwesternLabsContext db = new NorthwesternLabsContext();
         // GET: Employees/Home
+        //returns employee landing page
         [Authorize]
         public ActionResult Index()
         {
             string cookieName = FormsAuthentication.FormsCookieName; //Find cookie name
             HttpCookie authCookie = HttpContext.Request.Cookies[cookieName]; //Get the cookie by it's name
             FormsAuthenticationTicket ticket = FormsAuthentication.Decrypt(authCookie.Value); //Decrypt it
-            string UserName = ticket.Name; //You have the UserName!
+            string UserName = ticket.Name; //username received
             return View();
         }
 
@@ -33,6 +41,7 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
             return View();
         }
 
+        //BASE LOGIN PAGE - searches both employee_users and customer_users - redirects to respective landing page 
         [HttpPost]
         public ActionResult Login(System.Web.Mvc.FormCollection form, bool rememberMe = false)
         {

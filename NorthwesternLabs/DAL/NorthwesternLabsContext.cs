@@ -3,6 +3,8 @@
 //Username: NorthwestLabsAdmin2019
 //Password: IntExAdmin2-16
 
+//connect to Azure database
+
 using NorthwesternLabs.Models;
 using System;
 using System.Collections.Generic;
