@@ -11,7 +11,7 @@ namespace NorthwesternLabs.Models
     {
         [Key]
         public int CompoundLT { get; set; }
-        [DisplayName("Sequence #")]
+        [DisplayName("Sample #")]
         public int CompoundSequenceCode { get; set; }
         [DisplayName("Description")]
         public string Desc { get; set; }
