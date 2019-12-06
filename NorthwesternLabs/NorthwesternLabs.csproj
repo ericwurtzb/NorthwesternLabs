@@ -136,7 +136,7 @@
     <Content Include="Content\Images\tag.png" />
     <Content Include="Content\Images\workorder.png" />
     <Content Include="Content\Site.css" />
-    <Content Include="Controllers\Home Controller is in Employees-Controllers-HomeController.txt" />
+    <Content Include="Controllers\Home Controller is in Areas-Employees-Controllers-HomeController.txt" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

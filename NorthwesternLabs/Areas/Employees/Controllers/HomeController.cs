@@ -32,8 +32,32 @@ namespace NorthwesternLabs.Areas.Employees.Controllers
             string cookieName = FormsAuthentication.FormsCookieName; //Find cookie name
             HttpCookie authCookie = HttpContext.Request.Cookies[cookieName]; //Get the cookie by it's name
             FormsAuthenticationTicket ticket = FormsAuthentication.Decrypt(authCookie.Value); //Decrypt it
-            string UserName = ticket.Name; //username received
-            return View();
+            string username = ticket.Name; //Username is here!
+
+            //this is our role redirection system - since the base homepage is set to  Employees/Home/Index, we don't want customers getting in here. So we query with the username from the authentication cookie and get the "Role" from the query, and redirect accordingly
+            IEnumerable<User> currentUser =
+                 db.Database.SqlQuery<User>(
+             "Select EmployeeID as IDNum, Username, Password, 'Employee' as Role " +
+             "FROM [Employee_Users] " +
+             "WHERE Username = '" + username + "'" +
+            "UNION ALL " +
+            "Select *, 'Customer' " +
+             "FROM [Customer_Users] " +
+             "WHERE Username = '" + username + "'"
+            );
+
+            string CurrentCustRole = currentUser.First().Role;
+            
+            if (CurrentCustRole == "Employee")
+            {
+                return View();
+            }
+            else if (CurrentCustRole == "Customer")
+            {
+                return View("~/Areas/Customers/Views/CustHome/Index.cshtml");
+            }
+
+            return RedirectToAction("Login");
         }
 
         public ActionResult Login()
